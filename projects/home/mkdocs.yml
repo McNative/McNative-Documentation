@@ -10,8 +10,6 @@ theme:
   extra_css:
     - stylesheets/bootstrap-grid.min.css
     - stylesheets/style.css
-  icon:
-    repo: fontawesome/brands/github
   logo: https://content.pretronic.net/products/mcnative/logo.png
   favicon: https://content.pretronic.net/products/mcnative/logo.png
   palette:
