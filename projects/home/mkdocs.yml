@@ -12,12 +12,12 @@ theme:
     - stylesheets/style.css
   icon:
     repo: fontawesome/brands/github
-  logo: https://content.pretronic.net/brand/logo/pretronic-gray.png
-  favicon: https://content.pretronic.net/brand/logo/pretronic-gray.png
+  logo: https://content.pretronic.net/products/mcnative/logo.png
+  favicon: https://content.pretronic.net/products/mcnative/logo.png
   palette:
     scheme: preference
-    primary: 'indigo'
-    accent: 'indigo'
+    primary: 'deep orange'
+    accent: 'deep orange'
 
 markdown_extensions:
   - pymdownx.highlight
@@ -45,4 +45,4 @@ extra_css:
   - stylesheets/style.css
 
 
-edit_uri: https://github.com/Pretronic/Pretronic-Documentation/edit/main/projects/pretronic-database-query/docs/
+edit_uri: https://github.com/McNative/McNative-Documentation/edit/main/projects/home/docs/
