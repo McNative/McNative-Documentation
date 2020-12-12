@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+
+{% block tabs %}
+{{ super() }}
+
+<style>
+    .md-header {
+        position: initial !important;
+    }
+    .md-main__inner {
+        margin: 0 !important;
+    }
+    .md-tabs {
+        display: none;
+    }
+</style>
+
+<section class="tx-container">
+    <div class="md-grid md-typeset">
+        <div class="page-container">
+
+            <p>Running</p>
+
+        </div>
+        <div class="navbar-blocker"> </div>
+    </div>
+</section>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}

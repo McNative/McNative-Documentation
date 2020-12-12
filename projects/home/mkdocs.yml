@@ -42,5 +42,14 @@ extra_css:
   - stylesheets/bootstrap-grid.min.css
   - stylesheets/style.css
 
-
 edit_uri: https://github.com/McNative/McNative-Documentation/edit/main/projects/home/docs/
+disableRepo: true
+
+nav:
+  - Overview: index.md
+  - Server:
+      - Index: server/
+  - Plugins:
+      - Index: plugins/
+  - Console:
+      - Index: plugins/
