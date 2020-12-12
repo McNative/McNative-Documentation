@@ -7,7 +7,7 @@ final String GIT_DOCS_SSH = "git@github.com:McNative/McNative-Documentation.git"
 final String CI_NAME = "PretronicCI"
 final String CI_EMAIL = "ci@pretronic.net"
 
-final String CNAME = "docs.mcnative.net"
+final String CNAME = "docs.mcnative.org"
 
 final String PROJECT_NAME = "McNative-Documentation"
 final String TEMPLATE_PROJECT_NAME = "Pretronic-Dokumentation-Template"
