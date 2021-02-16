@@ -1,5 +1,5 @@
-html {
-    scroll-behavior: smooth;
+body, input {
+    color: var(--md-typeset-color);
 }
 
 .md-tabs {

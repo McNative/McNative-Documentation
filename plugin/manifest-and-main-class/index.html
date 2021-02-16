@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="http://docs.mcnative.org/server/">
+        <link rel="canonical" href="http://docs.mcnative.org/plugin/manifest-and-main-class/">
       
       
       <link rel="shortcut icon" href="https://content.pretronic.net/products/mcnative/logo.png">
@@ -16,14 +16,14 @@
     
     
       
-        <title>Server - McNative Documentation</title>
+        <title>Manifest and Main Class - McNative Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.19753c6b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.19753c6b.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.196e0c26.min.css">
         
           
           
@@ -42,13 +42,13 @@
     
     
     
-      <link rel="stylesheet" href="../stylesheets/dark_theme.css">
+      <link rel="stylesheet" href="../../stylesheets/dark_theme.css">
     
-      <link rel="stylesheet" href="../stylesheets/codehilite.css">
+      <link rel="stylesheet" href="../../stylesheets/codehilite.css">
     
-      <link rel="stylesheet" href="../stylesheets/bootstrap-grid.min.css">
+      <link rel="stylesheet" href="../../stylesheets/bootstrap-grid.min.css">
     
-      <link rel="stylesheet" href="../stylesheets/style.css">
+      <link rel="stylesheet" href="../../stylesheets/style.css">
     
     
       
@@ -71,6 +71,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#manifest-and-main-class" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -111,7 +116,7 @@
           </span>
                 <span class="md-header-nav__topic md-ellipsis">
             
-              Server
+              Manifest and Main Class
             
           </span>
             </div>
@@ -214,7 +219,7 @@
     
       
     
-    <a href=".." class="md-tabs__link md-tabs__link--active">
+    <a href="../.." class="md-tabs__link md-tabs__link--active">
       Overview
     </a>
   </li>
@@ -226,7 +231,7 @@
     <li class="md-tabs__item">
       
       
-      <a href="./" class="md-tabs__link">
+      <a href="../../server/" class="md-tabs__link">
         Server
       </a>
     </li>
@@ -239,7 +244,7 @@
     <li class="md-tabs__item">
       
       
-      <a href="../plugins/" class="md-tabs__link">
+      <a href="../../plugins/" class="md-tabs__link">
         Plugins
       </a>
     </li>
@@ -252,7 +257,7 @@
     <li class="md-tabs__item">
       
       
-      <a href="../plugins/" class="md-tabs__link">
+      <a href="../../plugins/" class="md-tabs__link">
         Console
       </a>
     </li>
@@ -304,7 +309,7 @@
 
 
   <li class="md-nav__item">
-    <a href=".." class="md-nav__link">
+    <a href="../.." class="md-nav__link">
       Overview
     </a>
   </li>
@@ -336,7 +341,7 @@
 
 
   <li class="md-nav__item">
-    <a href="./" class="md-nav__link">
+    <a href="../../server/" class="md-nav__link">
       Index
     </a>
   </li>
@@ -373,7 +378,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../plugins/" class="md-nav__link">
+    <a href="../../plugins/" class="md-nav__link">
       Index
     </a>
   </li>
@@ -410,7 +415,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../plugins/" class="md-nav__link">
+    <a href="../../plugins/" class="md-nav__link">
       Index
     </a>
   </li>
@@ -428,19 +433,53 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/McNative/McNative-Documentation/edit/main/projects/home/docs/server/index.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/McNative/McNative-Documentation/edit/main/projects/home/docs/plugin/manifest-and-main-class.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Server</h1>
-                
-                
+                <h1 id="manifest-and-main-class">Manifest and Main Class<a class="headerlink" href="#manifest-and-main-class" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span> <span class="nn">org.mcnative.example</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">net.pretronic.libraries.plugin.lifecycle.Lifecycle</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">net.pretronic.libraries.plugin.lifecycle.LifecycleState</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.mcnative.common.plugin.MinecraftPlugin</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">McNativeExamplePlugin</span> <span class="kd">extends</span> <span class="n">MinecraftPlugin</span> <span class="p">{</span>
+
+    <span class="nd">@Lifecycle</span><span class="p">(</span><span class="n">state</span> <span class="o">=</span> <span class="n">LifecycleState</span><span class="p">.</span><span class="na">BOOTSTRAP</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onLoad</span><span class="p">(</span><span class="n">LifecycleState</span> <span class="n">state</span><span class="p">){</span>
+        <span class="n">getLogger</span><span class="p">().</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;My plugin started successfully&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+
+    <span class="nd">@Lifecycle</span><span class="p">(</span><span class="n">state</span> <span class="o">=</span> <span class="n">LifecycleState</span><span class="p">.</span><span class="na">SHUTDOWN</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onShutdown</span><span class="p">(</span><span class="n">LifecycleState</span> <span class="n">state</span><span class="p">){</span>
+        <span class="n">getLogger</span><span class="p">().</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;My plugin stopped successfully&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
                 
                   
                     
@@ -449,7 +488,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2020-12-12
+      Last update: 2021-02-16
     
   </small>
 </div>
@@ -524,15 +563,15 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.0ac82a11.min.js"></script>
-      <script src="../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
-          base: "..",
+          base: "../..",
           features: ['navigation.tabs'],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
